@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Auranys Application - Accueil" %></title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+        <div class="title-bar-title">Auranys Application</div>
+        </div>
+
+        <div class="top-bar" id="example-menu">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Dashboard</li>
+            <li><a class="text-link" href="#">Tiers</a></li>
+            <li><a class="text-link" href="#">Ventes</a></li>
+            <li><a class="text-link" href="#">Produits</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><a class="text-link" href="">Connection</a>
+            </li>
+            <li><a class="text-link" href="">Inscription</a></li>
+            <li><a class="text-link" href="">Paramètre</a></li>
+            <li><a class="text-link" href="">Deconnection</a></li>
+            <li><input type="search" placeholder="Rechercher"></li>
+            <li><button type="button" class="button warning">Go</button></li>
+          </ul>
+        </div>
+    </div>
+    <%= yield %>
+
+  </body>
+</html>

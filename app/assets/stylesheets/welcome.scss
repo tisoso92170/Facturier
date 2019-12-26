@@ -1,0 +1,58 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$marge_droite: 150px;
+$marge_gauche: 150px;
+$marge_haut: 80px;
+
+.container {
+  margin-left: $marge_droite;
+  margin-right: $marge_gauche;
+  margin-top: $marge_haut;
+}
+
+
+  .text-link {
+      color: whitesmoke;
+}
+
+.dashboard-nav-card {
+  background: $primary-color;
+  border-radius: $card-border-radius;
+  color: $white;
+  display: block;
+  min-height: 100px;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    .dashboard-nav-card-title,
+    .dashboard-nav-card-icon {
+      color: $white;
+    }
+
+    .dashboard-nav-card-icon {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+.dashboard-nav-card-icon {
+  font-size: rem-calc(20);
+  left: 1rem;
+  opacity: 0.5;
+  position: absolute;
+  top: 1rem;
+  transition: all 0.2s ease;
+  width: auto;
+}
+
+.dashboard-nav-card-title {
+  bottom: 0;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+}
