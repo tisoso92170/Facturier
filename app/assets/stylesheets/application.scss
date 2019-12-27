@@ -16,11 +16,14 @@
 
  */
  @import "foundation_and_overrides";
-
+ @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lobster&display=swap');
  .searchbar {
    margin: 1rem;
  }
 
+.body {
+  font-family: 'Lobster', cursive;
+}
  .search-field {
    width: 0;
    height: 40px;
@@ -46,3 +49,54 @@
  .button {
    border-radius: 50px;
  }
+
+.login {
+  margin-left: 460px;
+  margin-right: 460px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 2px red solid;
+  border-left: 1px orange solid;
+  border-right: 1px green solid;
+  border-bottom: 2px black solid;
+  border-radius: 8px;
+  background: #e3dce0;
+  font-family: 'Lobster', cursive;
+  h5 {
+    position: center;
+    text-align: center;
+    color: orangered;
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+.shared {
+  margin-left: 460px;
+  margin-right: 460px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 20px;
+  border-top: 2px red solid;
+  border-left: 1px orange solid;
+  border-right: 1px green solid;
+  border-bottom: 2px black solid;
+  border-radius: 8px;
+  background: #e3dce0;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+
+.container-notice {
+  margin-top: 20px;
+  margin-left: 560px;
+  margin-right: 500px;
+}
+
+
+.mg_button {
+    padding-left: 10px;
+    margin-right: 10px;
+}

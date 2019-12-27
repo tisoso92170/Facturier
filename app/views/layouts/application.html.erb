@@ -20,27 +20,35 @@
         <div class="top-bar" id="example-menu">
         <div class="top-bar-left">
           <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Dashboard</li>
+            <% if user_signed_in? %>
+              <li class="menu-text">Dashboard</li>
+            <% else %>
+              <li class="menu-text">Connection en attente...</li>
+            <% end %>
+            <% if user_signed_in? %>
             <li><a class="text-link" href="#">Tiers</a></li>
             <li><a class="text-link" href="#">Ventes</a></li>
             <li><a class="text-link" href="#">Produits</a></li>
+            <% end %>
           </ul>
         </div>
         <div class="top-bar-right">
           <ul class="menu">
-            <li><a class="text-link" href="">Connection</a>
-            </li>
-            <li><a class="text-link" href="">Inscription</a></li>
+            <% if !user_signed_in? %>
+              <li><%= link_to "connection", new_user_session_path, class: "button success mg_button" %></li>
+              <li><%= link_to "inscription", new_user_registration_path, class: "button warning mg_button" %></li>
+            <% end %>
+            <% if user_signed_in? %>
+            <li><a href="#" class="text-link"><%= current_user.email %></a></li>
             <li><a class="text-link" href="">Paramètre</a></li>
-            <li><a class="text-link" href="">Deconnection</a></li>
-            <li><input type="search" placeholder="Rechercher"></li>
-            <li><button type="button" class="button warning">Go</button></li>
+            <li><%= link_to t('.sign_out', :default => "Déconnection"), destroy_user_session_path, method: 'delete' %></li>
+            <% end %>
           </ul>
         </div>
     </div>
-    <div class="container-notice" style="margin-top: 10px;">
-      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <div class="container-notice">
+      <p class="notice" style="color: green;"><%= notice %></p>
+       <p class="alert" style="color: red;"><%= alert %></p>
     </div>
     <%= yield %>
   </body>
