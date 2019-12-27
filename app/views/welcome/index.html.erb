@@ -1,8 +1,8 @@
 <div class="container">
   <% if @account.empty? %>
-  <div data-closable class="callout alert-callout-border warning radius">
-    <strong>Attention</strong> - Aucun compte pour utilisateur <em style="color: green;"><%= current_user.email %></em> n' a été déctecter.
-    <p>Afin de profiter pleinement des fonctionnalité, veuillez configurer votre compte, en vous trendent dans les paramètre</p>
+  <div data-closable class="callout alert-callout-border warning radius" style="text-align: justify;">
+    <strong>Attention</strong> - Aucun compte pour l'utilisateur <em style="color: green;"><%= current_user.email %></em> n' a été déctecter.
+    <p>Afin de profiter pleinement des fonctionnalitées, veuillez configurer votre compte, en vous trendent dans les paramètres</p>
     <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
       <span aria-hidden="true">&times;</span>
     </button>
