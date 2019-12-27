@@ -1,10 +1,13 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+@import 'settings';
+@import 'foundation';
+@import 'foundation_and_overrides';
 $marge_droite: 150px;
 $marge_gauche: 150px;
 $marge_haut: 80px;
+$primary-color: #0394fc;
 
 .container {
   margin-left: $marge_droite;
@@ -19,7 +22,8 @@ $marge_haut: 80px;
 
 .dashboard-nav-card {
   background: $primary-color;
-  border-radius: $card-border-radius;
+  border-radius: 7px;
+  border-top: solid 3px red;
   color: $white;
   display: block;
   min-height: 100px;
@@ -55,4 +59,23 @@ $marge_haut: 80px;
   position: absolute;
   right: 1rem;
   text-align: right;
+}
+
+$animated-search-form-initial-width: 10rem;
+$animated-search-form-transition-duration: 0.6s;
+
+.animated-search-form[type=search] {
+  width: $animated-search-form-initial-width;
+  border: 0.125rem solid $light-gray;
+  box-shadow: 0 0 3.125rem rgba(0,0,0, 0.18);
+  border-radius: 8px;;
+  background-image: url('//image.ibb.co/i7NbrQ/search_icon_15.png');
+  background-position: 0.625rem 0.625rem;
+  background-repeat: no-repeat;
+  padding: 0.75rem 1.25rem 0.75rem 2rem;
+  transition: width $animated-search-form-transition-duration ease-in-out;
+
+  &:focus {
+    width: 98%;
+  }
 }
