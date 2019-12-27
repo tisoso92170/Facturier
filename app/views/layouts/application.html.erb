@@ -35,8 +35,10 @@
         <div class="top-bar-right">
           <ul class="menu">
             <% if !user_signed_in? %>
-              <li><%= link_to "connection", new_user_session_path, class: "button success mg_button" %></li>
-              <li><%= link_to "inscription", new_user_registration_path, class: "button warning mg_button" %></li>
+              <div class="button-group-option" data-grouptype="OU">
+                <li><%= link_to "connection", new_user_session_path, class: "button success radius" %></li>
+                <li><%= link_to "inscription", new_user_registration_path, class: "button primary radius" %></li>
+              </div>
             <% end %>
             <% if user_signed_in? %>
             <li><a href="#" class="text-link"><%= current_user.email %></a></li>

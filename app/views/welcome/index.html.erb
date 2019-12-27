@@ -1,4 +1,13 @@
 <div class="container">
+  <% if @account.empty? %>
+  <div data-closable class="callout alert-callout-border warning radius">
+    <strong>Attention</strong> - Aucun compte pour utilisateur <em style="color: green;"><%= current_user.email %></em> n' a été déctecter.
+    <p>Afin de profiter pleinement des fonctionnalité, veuillez configurer votre compte, en vous trendent dans les paramètre</p>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+  <% end %>
   <input type="search" name="search" placeholder="Search.." class="animated-search-form" style="margin-left:14px; margin-right: 14px;">
   <div class="grid-x grid-padding-x">
     <div class="cell small-2">
