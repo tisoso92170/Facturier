@@ -7,6 +7,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable, :lockable, :trackable
 
-  has_and_belongs_to_many :companies
-  has_and_belongs_to_many :accounts, join_table: 'account_users'
+  belongs_to :companies
 end

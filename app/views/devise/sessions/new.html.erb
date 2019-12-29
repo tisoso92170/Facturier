@@ -2,32 +2,39 @@
   <div class="login">
     <%= foundation_devise_error_messages! %>
     <div class="row">
-      <div class="medium-6 medium-centered columns">
+      <div class="medium-10 medium-centered columns">
         <div class="login-box">
           <div class="row">
             <div class="large-12 columns">
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <div class="row">
-                  <h5 style="padding-left: 16px;">
-                    <%= t('.Connection Auranys', :default => "Connection Auranys") %>
-                  </h5>
+              <div class="form-icons">
+                <h4 style="text-align: center; color:orange;">Connectez vous sur Auranys Application</h4>
+                <div class="input-group">
+                  <span class="input-group-label">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                  <%= f.email_field :email, autofocus: true, class: "input-group-field", placeholder: "Adresse email" %>
                 </div>
-                <div class="row">
-                  <%= f.email_field :email, autofocus: true, class: "large-12 columns", placeholder: "Adresse email"%>
+
+                <div class="input-group">
+                  <span class="input-group-label">
+                    <i class="fa fa-key"></i>
+                  </span>
+                  <%= f.password_field :password, autocomplete: "off", class: "input-group-field", placeholder: "Mot de passe"%>
                 </div>
-                <div class="row">
-                  <%= f.password_field :password, autocomplete: "off", class: "large-12 columns", placeholder: "Mot de passe"%>
-                </div>
+              </div>
+
+              <div class="input-group">
                 <% if devise_mapping.rememberable? %>
-                  <div class="row">
                     <%= f.check_box :remember_me %>
                     <%= f.label :se_souvenir_de_moi %>
-                  </div>
                 <% end %>
-                <div class="row">
-                  <%= f.submit  t('.LANCER LA CONNECTION', :default => "LANCER LA CONNECTION"), class: "button warning expand large-12 large-centered columns " %>
-                </div>
-              <% end %>
+              </div>
+
+              <div class="row">
+                <%= f.submit  t('.LANCER LA CONNECTION', :default => "LANCER LA CONNECTION"), class: "button warning expanded " %>
+              </div>
+                <% end %>
             </div>
           </div>
         </div>
@@ -36,3 +43,7 @@
   </div>
   <%= render "devise/shared/links" %>
 </div>
+
+<form>
+
+</form>

@@ -1,0 +1,30 @@
+
+<div class="container-form">
+  <%= simple_form_for(@company) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :company_name, class: "large-12 columns", label: "Raison social" %>
+      <%= f.input :logo, as: :file, input_html: { class: 'button' }  %>
+      <%= f.input :contact_name, class: "large-12 columns", label: "responsable" %>
+      <%= f.input :contact_title, class: "large-12 columns", label: "Civilité", priority: ["Monsieur"], collection: ["Madame", "Monsieur", "Mademoiselle"] %>
+      <%= f.input :street_address_1, class: "large-12 columns", label: "adresse" %>
+      <%= f.input :street_address_2, class: "large-12 columns", label: "suite adresse" %>
+      <%= f.input :postal_or_zipcode, class: "large-12 columns", label: "code postale" %>
+      <%= f.input :city, class: "large-12 columns", label: "ville" %>
+      <%= f.input :province_or_state, class: "large-12 columns", label: "département" %>
+      <%= f.input :country, class: "large-12 columns", label: "pays" %>
+      <%= f.input :phone_number, class: "large-12 columns", label: "Téléphone" %>
+      <%= f.input :fax_number, class: "large-12 columns", label: "Télécopie" %>
+      <%= f.input :email, class: "large-12 columns", label: "email"%>
+      <%= f.input :num_siret, class: "large-12 columns", label: "Numero SIRET" %>
+      <%= f.input :code_ape, class: "large-12 columns", label: "Code APE" %>
+      <%= f.input :memo, as: :text, class: "large-12 columns", label: "Commentaires" %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit 'CREER VOTRE SOCIETE', class: "button warning expanded" %>
+    </div>
+  <% end %>
+</div>

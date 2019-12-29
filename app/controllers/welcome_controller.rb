@@ -2,6 +2,6 @@
 
 class WelcomeController < ApplicationController
   def index
-    @account = Account.all
+    @company = Company.all
   end
 end

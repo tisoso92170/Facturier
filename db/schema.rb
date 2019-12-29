@@ -12,11 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_12_27_205712) do
 
-  create_table "account_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "account_id"
-  end
-
   create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "org_name"
     t.string "country"

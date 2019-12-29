@@ -195,3 +195,33 @@ $alert-callout-border-radius: 0.6rem;
     }
   }
 }
+
+form {
+  .form-icons {
+    text-align: center;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    .input-group-label {
+      background-color: $warning-color;
+      border-color: $alert-color;
+    }
+
+    .input-group-field {
+      border-color: $success-color;
+    }
+
+    .fa {
+      color: white;
+      width: 1rem; // makes the width of icon labels equal
+    }
+  }
+}
+
+.container-form {
+  margin-left: 100px;
+  margin-right:100px;
+  margin-top: 50px;
+}

@@ -29,6 +29,7 @@ gem 'devise-foundation-views'
 gem 'font-awesome-rails'
 gem 'font-awesome-rails'
 gem 'foundation-rails'
+gem 'mini_magick'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'cancancan'

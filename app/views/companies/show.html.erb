@@ -1,0 +1,84 @@
+<div class="container-form">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Company name:</strong>
+    <%= @company.company_name %>
+  </p>
+
+
+
+
+  <p>
+    <strong>Contact name:</strong>
+    <%= @company.contact_name %>
+  </p>
+
+  <p>
+    <strong>Contact title:</strong>
+    <%= @company.contact_title %>
+  </p>
+
+  <p>
+    <strong>Street adress 1:</strong>
+    <%= @company.street_address_1 %>
+  </p>
+
+  <p>
+    <strong>Street adress 2:</strong>
+    <%= @company.street_address_2 %>
+  </p>
+
+  <p>
+    <strong>Postal or zipcode:</strong>
+    <%= @company.postal_or_zipcode %>
+  </p>
+
+  <p>
+    <strong>City:</strong>
+    <%= @company.city %>
+  </p>
+
+  <p>
+    <strong>Province or state:</strong>
+    <%= @company.province_or_state %>
+  </p>
+
+  <p>
+    <strong>Country:</strong>
+    <%= @company.country %>
+  </p>
+
+  <p>
+    <strong>Phone number:</strong>
+    <%= @company.phone_number %>
+  </p>
+
+  <p>
+    <strong>Fax number:</strong>
+    <%= @company.fax_number %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @company.email %>
+  </p>
+
+  <p>
+    <strong>Num siret:</strong>
+    <%= @company.num_siret %>
+  </p>
+
+  <p>
+    <strong>Code ape:</strong>
+    <%= @company.code_ape %>
+  </p>
+
+  <p>
+    <strong>Memo:</strong>
+    <%= @company.memo %>
+  </p>
+
+  <%= link_to 'Edit', edit_company_path(@company) %> |
+  <%= link_to 'Back', companies_path %>
+</div>
