@@ -39,7 +39,7 @@ gem 'rolify'
 gem 'country_select'
 gem 'simple_form'
 # gestion de la pagination -- https://github.com/kaminari/kaminari
-gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'kaminari', '~> 1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jquery-rails'
